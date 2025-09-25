@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #030303;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #83698f;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Sistema Cozinha</h2>
+        <button id="sair">Sair</button><br>
+    </br>
+    </header>
+    <main>
+        <section>
+            <table>
+                <tr>
+                    <th>Turno</th>
+                    <th>Data</th>
+                    <th>Refeição</th>
+                </tr>
+                <tr>
+                    <td>Manhã</td>
+                    <td>22/09/2025</td>
+                    <td>Almoço</td>
+                </tr>
+                <tr>
+                    <td>Tarde</td>
+                    <td>22/09/2025</td>
+                    <td>Almoço</td>
+                </tr>
+                <tr>
+                    <td>Noite</td>
+                    <td>22/09/2025</td>
+                    <td>Janta</td>
+                </tr>
+                <tr>
+                    <td>Integral</td>
+                    <td>22/09/2025</td>
+                    <td>Lanche</td>
+                </tr>
+            </table>
+        </section>
+        <aside>
+            <h2>Cadastrar Prato</h2>
+
+            <input type="date" id="date" placeholder="Data"><br>
+            </br>
+            <select name="turno" id="turno" placeholder="Turnos">
+                <option value="" selected disabled>Turnos</option>
+                <option value="elogios">Manhã</option>
+                <option value="reclamacao">Tarde</option>
+                <option value="critica">Noite</option>
+                <option value="critica">Integral</option>
+
+            <h2>Refeição</h2>
+
+            <input type="text" id="title" placeholder="Titulo"><br>
+            </br>
+            <input type="text" id="itens" placeholder="Itens"><br>
+            </br>
+            <input type="text" id="bebida" placeholder="Bebida"><br>
+            </br>
+            <button id="inserir">Inserir IMG</button><br>
+            </br>
+            <button id="cadastrar">Cadastrar</button>
+        </aside>
+
+        <section>
+            <h2>Fale Conosco</h2>
+
+            <select name="assunto" id="assunto" placeholder="Escolha o Assunto">
+                <option value="" selected disabled>Escolha o Assunto</option>
+                <option value="elogios">Elogio</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="critica">Critica</option>
+
+            </select><br>
+
+            <textarea>
+
+            </textarea>
+
+            <button id="enviar">Enviar</button>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
