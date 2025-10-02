@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+    background-color: #303AFF;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    height: 181px;
+}
+
+header button {
+    width: 217px;
+    height: 78px;
+    border-radius: 100px;
+    border: 0;
+    background-color: white;
+    color: #2550ff;
+    font-size: 24px;
+    font-style: "regular";
+    font-family: "inknut antiqua", sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #303AFF;
+    color: black;
+    font-size: 25px;
+    font-family: "inika", sans-serif;
+}
+
+h2 {
+    background-color: #303AFF;
+    width: 100%;
+    color: white;
+    font-size: 32px;
+    font-family: "Inika", sans-serif;
+}
+
+.conosco {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.conosco button {
+    width: 100px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 100px;
+    color: white;
+    background-color: #303AFF;
+    font-size: 25px;
+    font-family: "inika", sans-serif;
+}
+
+.opcao {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+select {
+    width: 417px;
+    height: 47px;
+    margin: 15px;
+}
+
+textarea {
+    width: 417px;
+    height: 47px;
+    margin: 15px;
+}
+
+aside {
+    margin-left: 100px;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Inika", sans-serif;
+    font-size: 26px;
+    color: black;
+    border: 2px solid white;
+}
+
+footer {
+    background-color: white;
+}
+
+.h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    background: #303AFF;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 96px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    background: #303AFF;
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid #DADADA;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+}
+
+h1 {
+    font-size: 96px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    background: #303AFF;
+}
+
+input {
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+    
+}
+
+button {
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    background: #448AFF;
+    color: white;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+    cursor: pointer;
+}
+
+table {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 0;
+    background: #303AFF;
+    padding: 40px;
+}
+
+

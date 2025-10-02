@@ -17,96 +17,133 @@
         }
 
         tr:nth-child(even) {
-            background-color: #83698f;
+            background-color: #e0dfe0;
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sistema.css">
 </head>
 
 <body>
     <header>
-        <h2>Sistema Cozinha</h2>
-        <button id="sair">Sair</button><br>
-    </br>
+
+        <h1>Sistema Cozinha</h1><br><br>
+
+        <button id="sair">Sair</button><br><br>
+
     </header>
     <main>
-        <section>
-            <table>
-                <tr>
-                    <th>Turno</th>
-                    <th>Data</th>
-                    <th>Refeição</th>
-                </tr>
-                <tr>
-                    <td>Manhã</td>
-                    <td>22/09/2025</td>
-                    <td>Almoço</td>
-                </tr>
-                <tr>
-                    <td>Tarde</td>
-                    <td>22/09/2025</td>
-                    <td>Almoço</td>
-                </tr>
-                <tr>
-                    <td>Noite</td>
-                    <td>22/09/2025</td>
-                    <td>Janta</td>
-                </tr>
-                <tr>
-                    <td>Integral</td>
-                    <td>22/09/2025</td>
-                    <td>Lanche</td>
-                </tr>
-            </table>
-        </section>
+        <div>
+            <section class="tabela">
+                <h2>Lista de Cardápio</h2>
+                <table>
+                    <tr>
+                        <th>Turno</th>
+                        <th>Data</th>
+                        <th>Refeição</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                    <tr>
+                        <td>Manhã</td>
+                        <td>22/09/2025</td>
+                        <td>Almoço</td>
+                        <td>✏️</td>
+                        <td>🗑️</td>
+                    </tr>
+                    <tr>
+                        <td>Tarde</td>
+                        <td>22/09/2025</td>
+                        <td>Almoço</td>
+                        <td>✏️</td>
+                        <td>🗑️</td>
+                    </tr>
+                    <tr>
+                        <td>Noite</td>
+                        <td>22/09/2025</td>
+                        <td>Janta</td>
+                        <td>✏️</td>
+                        <td>🗑️</td>
+                    </tr>
+                    <tr>
+                        <td>Integral</td>
+                        <td>22/09/2025</td>
+                        <td>Lanche</td>
+                        <td>✏️</td>
+                        <td>🗑️</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="conosco">
+                <div class="h2">
+                    <h2>Fale Conosco</h2>
+                </div>
+                <div class="opcao">
+                    <div>
+                        <select name="assunto" id="assunto" placeholder="Escolha o Assunto">
+                            <option value="" selected disabled>Escolha o Assunto</option>
+                            <option value="elogios">Elogio</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="critica">Critica</option>
+
+
+
+                        </select><br>
+                        <textarea name="opiniao" id="opiniao" placeholder="Digite Aqui..."
+                           ></textarea>
+                    </div>
+
+
+                    <button id="enviar">Enviar</button>
+                </div>
+
+            </section>
+        </div>
+        </div>
+
         <aside>
+
             <h2>Cadastrar Prato</h2>
+            
 
-            <input type="date" id="date" placeholder="Data"><br>
-            </br>
-            <select name="turno" id="turno" placeholder="Turnos">
-                <option value="" selected disabled>Turnos</option>
-                <option value="elogios">Manhã</option>
-                <option value="reclamacao">Tarde</option>
-                <option value="critica">Noite</option>
-                <option value="critica">Integral</option>
+                <input type="date" id="date" placeholder="Data"><br>
+                </br>
+                <select name="turno" id="turno" placeholder="Turnos">
 
-            <h2>Refeição</h2>
+                    <option value="" selected disabled>Turnos</option>
 
-            <input type="text" id="title" placeholder="Titulo"><br>
-            </br>
-            <input type="text" id="itens" placeholder="Itens"><br>
-            </br>
-            <input type="text" id="bebida" placeholder="Bebida"><br>
-            </br>
-            <button id="inserir">Inserir IMG</button><br>
-            </br>
-            <button id="cadastrar">Cadastrar</button>
+                    <option value="elogios">Manhã</option>
+                    <option value="reclamacao">Tarde</option>
+                    <option value="critica">Noite</option>
+                    <option value="critica">Integral</option>
+                </select>
+                <h2>Refeição</h2>
+
+
+                    <input type="text" id="title" placeholder="Titulo"><br><br>
+
+                    <input type="text" id="itens" placeholder="Itens"><br>
+                    </br>
+                    <input type="text" id="bebida" placeholder="Bebida"><br>
+                    </br>
+                    <button id="inserir">Inserir IMG</button><br>
+                    </br>
+                    <button id="cadastrar">Cadastrar</button>
+            
         </aside>
-
-        <section>
-            <h2>Fale Conosco</h2>
-
-            <select name="assunto" id="assunto" placeholder="Escolha o Assunto">
-                <option value="" selected disabled>Escolha o Assunto</option>
-                <option value="elogios">Elogio</option>
-                <option value="reclamacao">Reclamação</option>
-                <option value="critica">Critica</option>
-
-            </select><br>
-
-            <textarea>
-
-            </textarea>
-
-            <button id="enviar">Enviar</button>
-
-        </section>
-
     </main>
+
+
+    <footer>
+
+        <p>Desenvolvido Por: BuBu Gomes</p>
+
+    </footer>
+
+
 </body>
 
 </html>

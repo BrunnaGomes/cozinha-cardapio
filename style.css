@@ -11,8 +11,107 @@
 */
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #FFFFFF;
     font-family: "Inter", sans-serif;
+
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    min-width: 700px;
+}
+
+fieldset {
+    height: 66px;
+    width: 422px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+legend {
+    font-size: 24px;
+    font-family: "Inter", sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    outline: none;
+    height: 30px;
+    width: 422px;
+    border: 0;
+    font-size: 24px;
+}
+
+button{
+    height: 50px;
+    width: 200px;
+    border-radius: 100px;
+    border: 0;
+    background-color: #303AFF;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #303AFF;
+}
+
+h4{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: gray;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h3{
+    font-size: 19px;
+    color: #303AFF;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+figure{
+    width: 422px;
+    height: 149px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 @media(max-width:768px) {
