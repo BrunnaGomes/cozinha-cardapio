@@ -6,14 +6,15 @@
 
 
 body {
-    background-color: #303AFF;
+    background-color: white;
+    padding: 0;
 }
 
 header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+    padding: 0px;
     height: 181px;
 }
 
@@ -50,6 +51,7 @@ h2 {
     color: white;
     font-size: 32px;
     font-family: "Inika", sans-serif;
+    text-align: center;
 }
 
 .conosco {
@@ -77,22 +79,29 @@ h2 {
    
 }
 
-select {
-    width: 417px;
-    height: 47px;
+select  {
+    border-radius: 8px;
+    border: 1px solid #000;
+    height: 40px;
+    width: 260px;
+    padding: 0 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
     margin: 15px;
 }
 
 textarea {
-    width: 417px;
+    width: 200px;
     height: 47px;
     margin: 15px;
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
     margin-left: 100px;
     margin-top: 20px;
-    padding: 20px;
+    padding: 0;
     font-family: "Inika", sans-serif;
     font-size: 26px;
     color: black;
@@ -118,14 +127,15 @@ h1 {
     color: #ffffff;
     margin: 0;
     font-family: "Inika", sans-serif;
-    margin-top: 25px;
+    margin-top: 10px;
+    padding: 0;
     text-align: center;
     background: #303AFF;
 }
 
 input {
     border-radius: 8px;
-    border: 1px solid #DADADA;
+    border: 1px solid #140d0d;
     height: 40px;
     width: 300px;
     margin-bottom: 10px;
@@ -135,13 +145,12 @@ input {
 }
 
 h1 {
+    background-color: #303AFF;
+    width: 100%;
+    color: white;
     font-size: 96px;
-    color: #ffffff;
-    margin: 0;
     font-family: "Inika", sans-serif;
-    margin-top: 25px;
     text-align: center;
-    background: #303AFF;
 }
 
 input {
@@ -162,9 +171,10 @@ button {
     height: 40px;
     width: 150px;
     margin-top: 10px;
+    margin: 15px;
     background: #448AFF;
     color: white;
-    font-size: 26px;
+    font-size: 15px;
     font-family: "Inika", sans-serif;
     cursor: pointer;
 }
@@ -178,5 +188,132 @@ table {
     background: #303AFF;
     padding: 40px;
 }
+
+aside fieldset {
+    border: 0;
+    border-radius: 10px;
+}
+
+aside legend {
+    display: none;
+}
+
+div.h2 {
+    padding: 0;
+}
+
+@media(max-width:768px) {
+    body{
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 150px;
+        background-color: #303AFF;
+    }
+
+    header h1{
+        font-size: 32px;
+    }
+
+    header button {
+        width: 50px;
+        height: 28px;
+        color: black;
+        background-color: #4282AC;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    h3 {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 36px;
+        background-color: #448AFF;
+        color: #303AFF;
+        margin: 0;
+
+    }
+
+    aside fieldset {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    aside legend {
+        display: block;
+        color: black;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    input::placeholder,textarea::placeholder{
+        color: transparent;
+    }
+
+    .ocultar, select#turno, select#assunto{
+        background-color: transparent;
+        border: 0;
+        font-size: medium;
+    }
+
+    td {
+       border: 1px solid #020101;
+       padding: 0;
+       font-size: medium;
+       text-align: center;
+    }
+
+    th {
+        border: 1px solid #020101;
+        padding: 0;
+        font-size: medium;
+        text-align: center;
+    }
+
+    aside fieldset {
+        padding: 0;
+        width: 252px;
+        height: 42px;
+    }
+
+    input {
+        height:70%;
+        outline: none;
+    }
+    
+    form, input#date, select#turno {
+        font-size: 15px;
+    }
+
+}
+
 
 

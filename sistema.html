@@ -29,9 +29,10 @@
 <body>
     <header>
 
-        <h1>Sistema Cozinha</h1><br><br>
-
-        <button id="sair">Sair</button><br><br>
+        <h1>Sistema Cozinha</h1>
+        <div>
+            <button id="sair">Sair</button>
+        </div>
 
     </header>
     <main>
@@ -92,8 +93,7 @@
 
 
                         </select><br>
-                        <textarea name="opiniao" id="opiniao" placeholder="Digite Aqui..."
-                           ></textarea>
+                        <textarea name="opiniao" id="opiniao" placeholder="Digite Aqui..."></textarea>
                     </div>
 
 
@@ -102,38 +102,53 @@
 
             </section>
         </div>
-        </div>
 
         <aside>
 
             <h2>Cadastrar Prato</h2>
-            
-
-                <input type="date" id="date" placeholder="Data"><br>
+            <form action="">
+            <fieldset>
+                <legend>Data</legend>
+                <input type="date" id="date"  class="ocultar"><br>
                 </br>
-                <select name="turno" id="turno" placeholder="Turnos">
+            </fieldset>
+            <select name="turno" id="turno" placeholder="Turnos">
 
-                    <option value="" selected disabled>Turnos</option>
+                <option value="" class="ocultar" selected disabled>Turnos</option>
 
-                    <option value="elogios">Manhã</option>
-                    <option value="reclamacao">Tarde</option>
-                    <option value="critica">Noite</option>
-                    <option value="critica">Integral</option>
-                </select>
-                <h2>Refeição</h2>
+                <option value="elogios">Manhã</option>
+                <option value="reclamacao">Tarde</option>
+                <option value="critica">Noite</option>
+                <option value="critica">Integral</option>
+            </select>
+            <h2>Refeição</h2>
+
+            <fieldset>
+                <legend>Titulo</legend>
+                <input type="text" id="title" placeholder="Titulo" class="ocultar"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Itens</legend>
+                <input type="text" id="itens" placeholder="Itens" class="ocultar"><br>
+                </br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bebida</legend>
+                <input type="text" id="bebida" placeholder="Bebida" class="ocultar"><br>
+                </br>
+            </fieldset>
 
 
-                    <input type="text" id="title" placeholder="Titulo"><br><br>
-
-                    <input type="text" id="itens" placeholder="Itens"><br>
-                    </br>
-                    <input type="text" id="bebida" placeholder="Bebida"><br>
-                    </br>
-                    <button id="inserir">Inserir IMG</button><br>
-                    </br>
-                    <button id="cadastrar">Cadastrar</button>
+            <button id="inserir">Inserir IMG</button><br>
             
+
+            <button id="cadastrar">Cadastrar</button>
+            </form>
+
         </aside>
+
     </main>
 
 
