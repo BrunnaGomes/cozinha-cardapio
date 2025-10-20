@@ -30,7 +30,9 @@ main {
 
 main div {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 25px;
     min-width: 700px;
 }
