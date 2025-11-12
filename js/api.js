@@ -1,4 +1,4 @@
-const API_USUARIOS = "https://api-storage-cantina-main-two.vercel.app/";
+const API_USUARIOS = "https://cozinha-system-nuy5.onrender.com";
 
 async function tratarErroResponse(res, msgPadrao) {
     const textErro = await res.text();
@@ -96,7 +96,20 @@ export async function listarCardapio() {
 
 export async function cadastrarCardapio(cardapio) {
     try {
-        const res = await fetch(API_USUARIOS);
+        cardapio.usuarioId = Number(localStorage.getItem("usuarioId"));
+        const res = await fetch(API_USUARIOS, {
+            method: "post",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(cardapio)
+        });
+
+        if (res.ok) {
+            alert("Refeição cadastrada com sucesso!");
+            listarCardapio();
+        } else {
+            alert("Erro ao cadastrar refeição");
+        }
+
     } catch (error) {
         console.error("Erro ao cadastrar", error);
         alert("Ocorreu um erro ao fazer seu cadastro.");
@@ -105,8 +118,23 @@ export async function cadastrarCardapio(cardapio) {
 
 export async function alterarCardapio(id) {
     try {
-        const res = await fetch(API_USUARIOS);
-        const cardapios = await res.json();
+        const res = await fetch(`API_USUARIOS/${id}`);
+        const cardapio = await res.json();
+        document.querySelector("#date").value = cardapio.data.split("T")[0];
+        document.querySelector("select#turnos").value = cardapio.turno;
+        document.querySelector("input[name='refeicao']").value = cardapio.refeicao.titulo;
+        document.querySelector("textarea[name='itens']").value = cardapio.refeicao.itens.join(", ");
+        document.querySelector("input[name='bebida']").value = cardapio.refeicao.bebida.join(",");
+
+        if (cardapio.lanche) {
+            document.querySelector("#date").value = cardapio.data.split("T")[0];
+            document.querySelector("select#turnos").value = cardapio.turno;
+            document.querySelector("input[name='refeicao']").value = cardapio.refeicao.titulo;
+            document.querySelector("textarea[name='itens']").value = cardapio.refeicao.itens.join(", ");
+            document.querySelector("input[name='bebida']").value = cardapio.refeicao.bebida.join(",");
+        } else {
+
+        }
     } catch (error) {
         console.error("Erro ao alterar cardápio", error);
         alert("Ocorreu um erro ao alterar cardápio.");
