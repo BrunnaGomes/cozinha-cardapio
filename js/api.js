@@ -1,15 +1,7 @@
-const API_USUARIOS = "https://cozinha-system-nuy5.onrender.com";
+import{tratarErroResponse, getAuthHeaders} from '.utils.js'
 
-async function tratarErroResponse(res, msgPadrao) {
-    const textErro = await res.text();
-    let msgErro;
-    try {
-        const errorData = JSON.parse(textErro);
-        msgErro = errorData.msg || errorData.error || errorData.message || textErro;
-    } catch (error) {
-        msgErro = textErro;
-    }
-}
+const API_USUARIOS = "https://cozinha-system-nuy5.onrender.com/usuarios";
+const API_CARDAPIO = "https://cozinha-system-nuy5.onrender.com/cardapios";
 
 async function loginCozinheira(email, senha) {
     try {
@@ -21,6 +13,10 @@ async function loginCozinheira(email, senha) {
 
         return { secesso: false, msg: msgErro || msgPadrao || "Erro ao fazer login", };
 
+        if(!res.ok){
+            return await tratarErroResponse(res,'Erro ao efetuar login')
+        }
+        
         const data = await res.json();
 
         if (data.usuario) {
@@ -49,6 +45,10 @@ async function cadastrarCozinheira(nome, email, senha) {
             body: JSON.stringify({ nome, email, senha }),
         });
 
+         if(!res.ok){
+            return await tratarErroResponse(res,'Erro ao efetuar cadastro')
+        }
+
         return { secesso: false, msg: msgErro || msgPadrao || "Erro ao cadastrar usuario", };
         const data = await res.json();
         return { sucesso: true, user: data.usuario || null };
@@ -68,6 +68,10 @@ async function recuperarSenha(email) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email }),
         })
+
+         if(!res.ok){
+            return await tratarErroResponse(res,'Erro ao recuperar senha')
+        }
 
         return { secesso: false, msg: msgErro || msgPadrao || "Erro ao recuperar senha", };
         const data = await res.json();
